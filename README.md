@@ -1,5 +1,3 @@
-# df-gitlab-cli-demo
-
 This is a simple Flask hello world app to be run in a Docker container. It is the first 
 step in replicating the DF architecture on a private network.
 
