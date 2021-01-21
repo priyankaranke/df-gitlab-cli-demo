@@ -6,7 +6,7 @@ variables:
   PERSONAL_ACCESS_TOKEN: "VmA58WZFx9h__2K_xT12" 
   CI_REGISTRY: "registry.gitlab.com"
   USER: "priyankaranke"
-  GROUP: "dragonfruit"
+  GROUP: "dragonfruitai/applications"
   PROJECT: "df-gitlab-cli-demo"
 
 build:
