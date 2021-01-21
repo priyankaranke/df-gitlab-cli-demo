@@ -5,6 +5,7 @@
 variables:
   PERSONAL_ACCESS_TOKEN: "VmA58WZFx9h__2K_xT12" 
   CI_REGISTRY: "registry.gitlab.com"
+  USER: "priyankaranke"
   GROUP: "dragonfruit"
   PROJECT: "df-gitlab-cli-demo"
 
@@ -14,6 +15,6 @@ build:
   services:
     - docker:19.03.12-dind
   script:
-    - docker login -u  -p ${PERSONAL_ACCESS_TOKEN} ${CI_REGISTRY}
+    - docker login -u ${USER} -p ${PERSONAL_ACCESS_TOKEN} ${CI_REGISTRY}
     - docker build -t ${CI_REGISTRY}/${GROUP}/${PROJECT}/image:latest .
     - docker push ${CI_REGISTRY}/${GROUP}/${PROJECT}/image:latest
