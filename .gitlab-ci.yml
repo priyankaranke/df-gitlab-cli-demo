@@ -3,7 +3,7 @@
 
 # Private in GitHub
 variables:
-  PERSONAL_ACCESS_TOKEN: "VmA58WZFx9h__2K_xT12" 
+  PERSONAL_ACCESS_TOKEN: "682zfjsq2SH5BLcJEkdZ" 
   CI_REGISTRY: "registry.gitlab.com"
   USER: "priyankaranke"
   GROUP: "dragonfruitai/applications"
