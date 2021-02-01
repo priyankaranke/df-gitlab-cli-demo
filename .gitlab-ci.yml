@@ -1,10 +1,11 @@
 # Public in Gitlab (within org) for now but does not impact anything 
 # except read/write image access to container registry of a toy repo
 
-# Private in GitHub
 variables:
   PERSONAL_ACCESS_TOKEN: "682zfjsq2SH5BLcJEkdZ" 
   CI_REGISTRY: "registry.gitlab.com"
+  CI_VERSION: "1.0.${CI_JOB_ID}"
+
   USER: "priyankaranke"
   GROUP: "dragonfruitai/applications"
   PROJECT: "df-gitlab-cli-demo"
@@ -16,5 +17,5 @@ build:
     - docker:19.03.12-dind
   script:
     - docker login -u ${USER} -p ${PERSONAL_ACCESS_TOKEN} ${CI_REGISTRY}
-    - docker build -t ${CI_REGISTRY}/${GROUP}/${PROJECT}/image:latest .
-    - docker push ${CI_REGISTRY}/${GROUP}/${PROJECT}/image:latest
+    - docker build -t ${CI_REGISTRY}/${GROUP}/${PROJECT}/image:$CI_VERSION .
+    - docker push ${CI_REGISTRY}/${GROUP}/${PROJECT}/image:$CI_VERSION
